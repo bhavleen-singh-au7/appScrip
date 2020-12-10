@@ -16,8 +16,8 @@
 }
 
 .sideNav {
-  height: 90vh;
-  width: 20vw;
+  width: 25vw;
+  overflow: auto;
 }
 
 .white {
