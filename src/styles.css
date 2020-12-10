@@ -16,10 +16,33 @@
 }
 
 .sideNav {
+  min-height: 90vh;
   width: 25vw;
-  overflow: auto;
 }
 
-.white {
-  background-color: #f0fff0;
+.bg-nav {
+  background-color: #243365;
+}
+
+.bg-text {
+  background-color: #7e91d1;
+}
+.bg-text:focus {
+  background-color: #7e91d1;
+}
+
+.bg {
+  background-color: #0f152a;
+}
+
+.bg-navyBlue {
+  background-color: #1b235f;
+}
+
+.bg-navyBlue1 {
+  background-color: #161c4c;
+}
+
+.bg-navyBlue1:hover {
+  background-color: #12163d;
 }

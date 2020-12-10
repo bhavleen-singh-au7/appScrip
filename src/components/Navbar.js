@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 
-const Navbar = ({handleSubmit}) => {
+const Navbar = ({ handleSubmit, value, onChange }) => {
   return (
     <Fragment>
-      <nav className="navbar navbar-expand-lg navbar-light bg-primary">
+      <nav className="navbar navbar-expand-lg navbar-light bg-nav">
         <div className="container">
           <div className="navbar-brand text-light">
             <strong>Movies React App</strong>
@@ -11,9 +11,12 @@ const Navbar = ({handleSubmit}) => {
           <form className="m-auto" onSubmit={handleSubmit}>
             <input
               type="search"
-              placeholder="Search"
-              className="mt-2 form-control"
+              placeholder="Search Movies"
+              className="mt-2 form-control bg-text text-light font-weight-bold"
+              value={value}
+              onChange={onChange}
               autoFocus
+              autoCapitalize
             />
           </form>
         </div>
