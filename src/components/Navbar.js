@@ -16,7 +16,6 @@ const Navbar = ({ handleSubmit, value, onChange }) => {
               value={value}
               onChange={onChange}
               autoFocus
-              autoCapitalize
             />
           </form>
         </div>

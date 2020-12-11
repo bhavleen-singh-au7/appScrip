@@ -1,47 +1,64 @@
 import React from "react";
 
-const Details = () => {
+const Details = ({ movieData, loading }) => {
   return (
-    <div className="p-3">
+    <div
+      className="p-3"
+      style={{
+        overflowY: "auto",
+        overflowX: "hidden",
+        height: "100vh",
+        width: "70vw",
+      }}>
       <h2 className="text-center text-warning">
         Information
       </h2>
       <hr className="bg-light" />
-      <div className="row">
-        <div className="col-4">
-          <img
-            src="https://image.tmdb.org/t/p/original/gfJGlDaHuWimErCr5Ql0I8x9QSy.jpg"
-            width="100%"
-            alt="poster_path"
-          />
+      {loading ? (
+        <h5 className="text-light">
+          Search To See Movies Information
+        </h5>
+      ) : (
+        <div className="row">
+          <div className="col-4">
+            <img
+              src={`${process.env.REACT_APP_BASE_IMAGE_URL}${movieData.poster_path}`}
+              width="100%"
+              alt="poster_path"
+            />
+          </div>
+          <div className="col-8 p-3 text-light">
+            <p>
+              <strong>Title: </strong>
+              {movieData.title}
+            </p>
+            <p>
+              <strong>Overview: </strong>
+              {movieData.overview}
+            </p>
+            <p>
+              <strong>Release Date: </strong>
+              {movieData.release_date}
+            </p>
+            <p>
+              <strong>Popularity: </strong>
+              {movieData.popularity}
+            </p>
+            <p>
+              <strong>Rate: </strong>
+              {movieData.vote_average}
+            </p>
+            <p>
+              <strong>Original Language: </strong>{" "}
+              {movieData.original_language}
+            </p>
+            <p>
+              <strong>Adult : </strong>{" "}
+              {movieData.adult ? "True" : "False"}
+            </p>
+          </div>
         </div>
-        <div className="col-8 p-3 text-light">
-          <p>
-            <strong>Title: </strong>Wonder Woman
-          </p>
-          <p>
-            <strong>Overview: </strong>An Amazon princess
-            comes to the world of Man in the grips of the
-            First World War to confront the forces of evil
-            and bring an end to human conflict.
-          </p>
-          <p>
-            <strong>Release Date: </strong>2017-05-30
-          </p>
-          <p>
-            <strong>Popularity: </strong>117.878
-          </p>
-          <p>
-            <strong>Rate: </strong>7.8
-          </p>
-          <p>
-            <strong>Original Language: </strong> English
-          </p>
-          <p>
-            <strong>Adult : </strong> False
-          </p>
-        </div>
-      </div>
+      )}
     </div>
   );
 };

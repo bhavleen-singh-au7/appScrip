@@ -6,7 +6,7 @@ const MovieCard = ({
   release_date,
 }) => {
   return (
-    <div className="bg-navyBlue1 my-4">
+    <div className="bg-navyBlue1">
       <div className="row">
         <div className="col-4">
           <img

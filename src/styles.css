@@ -16,7 +16,9 @@
 }
 
 .sideNav {
-  min-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
   width: 25vw;
 }
 
@@ -45,4 +47,29 @@
 
 .bg-navyBlue1:hover {
   background-color: #12163d;
+}
+
+/* ScrollBar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px tan;
+  border-radius: 7px;
+  background-color: tan;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #191b2a;
+  border-radius: 7px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1f2235;
 }

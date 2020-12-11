@@ -1,7 +1,16 @@
 import React from "react";
 import MovieCard from "./MovieCard";
 
-const Sidebar = ({ response, loading }) => {
+const Sidebar = ({
+  response,
+  loading,
+  onClick,
+  getMovieId,
+}) => {
+  const clicker = (mId) => {
+    getMovieId(mId);
+  };
+
   return (
     <div className="bg-navyBlue sideNav">
       <div className="text-center">
@@ -14,12 +23,16 @@ const Sidebar = ({ response, loading }) => {
         ) : (
           response &&
           response.map((data) => (
-            <MovieCard
+            <button
               key={data.id}
-              poster_path={data.poster_path}
-              title={data.title}
-              release_date={data.release_date}
-            />
+              onClick={() => clicker(data.id)}
+              className="my-4">
+              <MovieCard
+                poster_path={data.poster_path}
+                title={data.title}
+                release_date={data.release_date}
+              />
+            </button>
           ))
         )}
       </div>
