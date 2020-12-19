@@ -1,4 +1,4 @@
-# FrontEnd Assignment by AppScrip
+# FrontEnd Assignment by Company
 
 Live link to Assignment
 [**Click Here**](https://moviedbreactify.netlify.app/)
